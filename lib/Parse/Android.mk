@@ -36,6 +36,8 @@ clang_parse_SRC_FILES :=  \
 	Parser.cpp
 
 LOCAL_SRC_FILES := $(clang_parse_SRC_FILES)
+LOCAL_CFLAGS := -fno-strict-aliasing $(call-cc-option,-Qunused-arguments)
+LOCAL_CPPFLAGS := -fno-strict-aliasing
 
 LOCAL_MODULE:= libclangParse
 LOCAL_MODULE_TAGS := optional
